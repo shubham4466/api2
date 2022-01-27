@@ -96,10 +96,10 @@ submit.addEventListener('click', () => {
         fetch(url, {
             method: 'GET',   
         })
-        .then(response=> response.text())
-        .then((text) =>{
+        .then(response=> response.JSON())
+        .then((JSON) =>{
             // document.getElementById('responseJsonText').value = text;
-            document.getElementById('responsePrism').innerHTML = text;
+            document.getElementById('responsePrism').innerHTML = JSON;
             Prism.highlightAll();
         });
     }
